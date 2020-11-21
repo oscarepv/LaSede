@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaLogin"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="0" BackgroundColor="LightGray">
+            <Grid>
+
+                <StackLayout Margin="15, 30, 15, 0">
+                    <Frame BackgroundColor="White" HasShadow="True" HeightRequest="450" HorizontalOptions="FillAndExpand">
+                        <StackLayout>
+
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Image Source="logo_leon.png" WidthRequest="100" Aspect="AspectFill"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,25,0,0">
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0"  CornerRadius="50" 
+                                       HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="35" HeightRequest="35" WidthRequest="40"
+                                               HorizontalOptions="Start" Padding="0" Margin="10">
+
+                                        </Frame>
+                                        <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Email" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0"  CornerRadius="50" 
+                                       HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="35" HeightRequest="35" WidthRequest="40"
+                                               HorizontalOptions="Start" Padding="0" Margin="10">
+                                        </Frame>
+                                        <Entry x:Name="txtPasswd" IsPassword="True" Placeholder="Password" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="Olvide mi contraseña" HorizontalOptions="Start" VerticalTextAlignment="Center"/>
+                                <Label x:Name="btnRegistro" Text="Registrarse" HorizontalTextAlignment="End"  TextColor="HotPink" HorizontalOptions="EndAndExpand">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="tapRegistro" Tapped="tapRegistro_Tapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+
+                            <Button Text="Iniciar Sesion" BackgroundColor="#26AD86" TextColor="White" FontAttributes="Bold"
+                                    x:Name="btnLogin" Margin="0,20,0,0" CornerRadius="20" Clicked="btnLogin_Clicked"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Label Text="No estas conectado?" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label  Text="Prueba con" HorizontalTextAlignment="Center" TextColor="HotPink" FontAttributes="Bold"
+                                       VerticalTextAlignment="Center"/>
+
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                                <Frame WidthRequest="50" Padding="0" Margin="0" HasShadow="False">
+                                    <Image Source="google.png" Aspect="AspectFill"/>
+                                </Frame>
+                                <Frame WidthRequest="50" Padding="0" Margin="0"  HasShadow="False">
+                                    <Image Source="facebook.png" Aspect="AspectFill"/>
+                                </Frame>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

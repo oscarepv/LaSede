@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaPerfil">
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Label Text="Mi Perfil" FontSize="18" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7E7E7">
+
+            <ScrollView>
+                <Frame Margin="10,20,15,20" HasShadow="True">
+                    <StackLayout BackgroundColor="#fff" Margin="5,0,10,0" >
+                        <Label x:Name="lblUsuario" IsVisible="False" Grid.Column="1"/>
+                        <Entry x:Name="txtUrl"  IsVisible="False"  IsReadOnly="True"  />
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image x:Name="foto" Grid.Row="0" Grid.Column="0" Source="" HeightRequest="200"/>
+                            <Button Grid.Row="0" Grid.Column="1" x:Name="btnFoto" Text="Subir Fotografia" FontAttributes="Bold" 
+                                    TextColor="White" BackgroundColor="#26AD86" Clicked="btnFoto_Clicked" HeightRequest="60" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Text="Nombre: "  Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Apellido: "  Grid.Column="0" Grid.Row="1" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Documento: "  Grid.Column="0" Grid.Row="2" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Telefono: "  Grid.Column="0" Grid.Row="3" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Correo: "  Grid.Column="0" Grid.Row="4" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Contraseña: "  Grid.Column="0" Grid.Row="5" VerticalOptions="CenterAndExpand"/>
+
+                            <Entry x:Name="txtNombre" Placeholder="Nombre"  Grid.Column="1"  Grid.Row="0"/>
+                            <Entry x:Name="txtApellido" Placeholder="Apellido"  Grid.Column="1"  Grid.Row="1"/>
+                            <Entry x:Name="txtDocumento" Placeholder="N° Documento" Keyboard="Numeric"  Grid.Column="1"  Grid.Row="2"/>
+                            <Entry x:Name="txtTelefono" Placeholder="Telefono" Keyboard="Numeric"  Grid.Column="1"  Grid.Row="3"/>
+                            <Entry x:Name="txtCorreo" Placeholder="Correo" Keyboard="Email"  Grid.Column="1"  Grid.Row="4"/>
+                            <Entry x:Name="txtRePasswd" Placeholder="Cambio de contraseña Contraseña" IsPassword="True"  
+                                   Grid.Column="1"  Grid.Row="5"/>
+
+                        </Grid>
+
+                    </StackLayout>
+                </Frame>
+            </ScrollView>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="btnGuardar" Text="Guardar Cambios" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                                    BackgroundColor="#828282" Clicked="btnGuardar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

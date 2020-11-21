@@ -10,7 +10,8 @@ namespace LaSede
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new vistaLogin())
+            { BarBackgroundColor = Color.FromRgb(38, 173, 134), BarTextColor = Color.White }; ;
         }
 
         protected override void OnStart()

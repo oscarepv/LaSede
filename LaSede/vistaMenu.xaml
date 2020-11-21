@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaMenu"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="0" Padding="0" BackgroundColor="#E7E7E7">
+
+            <Frame HasShadow="True" Margin="20,50,20,50" >
+                <StackLayout BackgroundColor="White" HeightRequest="400">
+
+                    <Label x:Name="lblNombre" IsVisible="True" FontSize="18" TextColor="HotPink"/>
+
+                    <Button x:Name="btnVistaReservas" Margin="0,20,0,0" TextColor="White" Text="Mis reservas" FontSize="16" BackgroundColor="#26AD86" 
+                            FontAttributes="Bold"/>
+                    <Button x:Name="btnVistaPerfil" Margin="0,20,0,0"  TextColor="White" Text="Mi Perfil" FontSize="16" BackgroundColor="#26AD86" 
+                            FontAttributes="Bold" Clicked="btnVistaPerfil_Clicked"/>
+                    <Button x:Name="btnVistaAlquiler" Margin="0,20,0,0"  TextColor="White" Text="Alqular canchas" FontSize="16" BackgroundColor="#26AD86" 
+                            FontAttributes="Bold" Clicked="btnVistaAlquiler_Clicked"/>
+
+                    <StackLayout VerticalOptions="EndAndExpand">
+                        <Button x:Name="btnSalir" Margin="0"  TextColor="White" Text="Salir" FontSize="16" BackgroundColor="#828282"
+                                FontAttributes="Bold" Clicked="btnSalir_Clicked">
+                        </Button>
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
