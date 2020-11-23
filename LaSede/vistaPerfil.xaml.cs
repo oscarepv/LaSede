@@ -18,7 +18,7 @@ namespace LaSede
     public partial class vistaPerfil : ContentPage
     {
         HttpClient cliente = new HttpClient();
-        private const string Url = "http://dmoviles-proyecto.atwebpages.com/usuarioPost.php";
+        private const string Url = "http://192.168.1.3/laSedeWebService/usuarioPost.php";
         private int idCliente;
 
         public vistaPerfil()

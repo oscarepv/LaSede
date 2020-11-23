@@ -15,7 +15,7 @@ namespace LaSede
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class vistaTipos : ContentPage
     {
-        private const string Url = "http://dmoviles-proyecto.atwebpages.com/tipoCanchaPost.php";
+        private const string Url = "http://192.168.100.161/laSedeWebService/tipoCanchaPost.php";
         private readonly HttpClient cliente = new HttpClient();
         private ObservableCollection<Models.TipoCancha> _post;
         public vistaTipos()

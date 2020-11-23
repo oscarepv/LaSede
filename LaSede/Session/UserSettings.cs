@@ -28,6 +28,12 @@ namespace LaSede.Session
             set => AppSettings.AddOrUpdateValue(nameof(userId), value);
         }
 
+        public static string tiposuario
+        {
+            get => AppSettings.GetValueOrDefault(nameof(tiposuario), string.Empty);
+            set => AppSettings.AddOrUpdateValue(nameof(tiposuario), value);
+        }
+
         public static void ClearAllData()
         {
             AppSettings.Clear();

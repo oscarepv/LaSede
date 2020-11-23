@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaCanchasHoras">
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Label Text="Canchas - Horarios" FontSize="18" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout Margin="0" Padding="0" BackgroundColor="#E7E7E7">
+        <Frame HasShadow="True" Margin="20,50,20,50" >
+            <StackLayout BackgroundColor="White" HeightRequest="400">
+                <ListView x:Name="listaCanchasHoras" ItemSelected="listaCanchasHoras_ItemSelected">
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <ViewCell >
+                                <!--<custom:CustomViewCell SelectedItemBackgroundColor="#ADF3BE">-->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label x:Name="lblCancha" Text="{Binding horaInicio} " Margin="5" FontSize="18" HorizontalTextAlignment="Start"
+                                               VerticalTextAlignment="Center"/>
+
+                                    <Label x:Name="lblHora" Text="{Binding horaFin} " Margin="5" FontSize="18" HorizontalTextAlignment="Start"
+                                               VerticalTextAlignment="Center"/>
+
+                                    <Label x:Name="lblEdad" Text=">" FontSize="20" HorizontalOptions="EndAndExpand" Margin="5" VerticalTextAlignment="Center"/>
+
+
+                                </StackLayout>
+                                <!--</custom:CustomViewCell>-->
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </Frame>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Button x:Name="btnNuevo" Text="Nuevo" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                                    BackgroundColor="#828282" Clicked="btnNuevo_Clicked"/>
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

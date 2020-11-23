@@ -22,5 +22,8 @@ namespace LaSede.Models
         public string documento { get; set; }
         public string telefono { get; set; }
         public string url_foto { get; set; }
+
+        [JsonProperty("tipo_usuario")]
+        public string tipoUsuario { get; set; }
     }
 }

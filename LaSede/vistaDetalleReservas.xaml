@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaDetalleReservas">
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Label Text="Reserva" FontSize="18" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7E7E7">
+
+            <ScrollView>
+                <Frame Margin="10,20,15,20" HasShadow="True">
+                    <StackLayout BackgroundColor="#fff" Margin="5,0,10,0" >
+                        <Label x:Name="lblCancha" Text=""  Grid.Column="1"/>
+                        <Label x:Name="lblHoraI" Text=""  Grid.Column="1"/>
+                        <Label x:Name="lblHoraF" Text=""  Grid.Column="1"/>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Text="Fecha: "  Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Observación: "  Grid.Column="0" Grid.Row="1" VerticalOptions="CenterAndExpand"/>
+                            <DatePicker x:Name="fechaReserva" Grid.Column="1"  Grid.Row="0" />
+                            <Entry x:Name="txtObservacion" Placeholder="Digite aquí" HorizontalOptions="FillAndExpand" 
+                               Margin="0,0,15,0" Grid.Column="1"  Grid.Row="1" />
+                        </Grid>
+
+                    </StackLayout>
+                </Frame>
+            </ScrollView>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="btnGuardar" Text="Guardar" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                                    BackgroundColor="#828282" Clicked="btnGuardar_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

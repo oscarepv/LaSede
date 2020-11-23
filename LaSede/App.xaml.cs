@@ -11,6 +11,7 @@ namespace LaSede
             InitializeComponent();
 
             MainPage = new NavigationPage(new vistaLogin())
+            // MainPage = new NavigationPage(new vistaCanchas ())
             { BarBackgroundColor = Color.FromRgb(38, 173, 134), BarTextColor = Color.White }; ;
         }
 

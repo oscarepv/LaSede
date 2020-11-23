@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaUbicaciones">
+    <StackLayout>
+        <Label Text="Ubicacion"></Label>
+        <Entry Text="LA SEDE CANCHA SINTÉTICA QUITO" x:Name="txtNombre" IsEnabled="False" />
+        <Label Text="Latitud" IsVisible="false"/>
+        <Entry Text="-0.1158609" Keyboard="Numeric"  x:Name="txtLatitud"  IsVisible="false" />
+        <Label Text="Longitud" Margin="0,24,0,0"  IsVisible="false" ></Label>
+        <Entry Text="-78.4830583" Keyboard="Numeric"  x:Name="txtlongitud"  IsVisible="false"/>
+        <Button Text="Abrir ubicación" x:Name="btnAbrir" Clicked="btnAbrir_Clicked" />
+    </StackLayout>
+        
+   
+</ContentPage>

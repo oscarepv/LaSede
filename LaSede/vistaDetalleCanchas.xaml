@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LaSede.vistaDetalleCanchas">
+    <NavigationPage.TitleView >
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Label Text="Cancha" FontSize="18" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="0" Padding="0" >
+            <StackLayout Margin="15,30,15,30">
+
+                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0"  CornerRadius="50" 
+                                       HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="AliceBlue" CornerRadius="35" HeightRequest="35" WidthRequest="40"
+                                               HorizontalOptions="Start" Padding="0" Margin="10">
+                        </Frame>
+                        <Entry x:Name="txtNombre" Placeholder="Nombre" HorizontalOptions="FillAndExpand" 
+                               Margin="0,0,15,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0"  CornerRadius="50" 
+                                       HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="AliceBlue" CornerRadius="35" HeightRequest="35" WidthRequest="40"
+                                               HorizontalOptions="Start" Padding="0" Margin="10">
+                        </Frame>
+                        <Entry x:Name="txtValor" Placeholder="Valor" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+
+                    </StackLayout>
+                </Frame>
+
+
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="btnGuardar" Text="Guardar" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                                    BackgroundColor="#828282" Clicked="btnGuardar_Clicked"/>
+
+                <Button x:Name="btnModificar" Text="Guardar" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                                    BackgroundColor="#828282" Clicked="btnModificar_Clicked"/>
+                <Button x:Name="btnEliminar" Text="Eliminar" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                                    BackgroundColor="#FF0000" Clicked="btnEliminar_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

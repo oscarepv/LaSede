@@ -34,7 +34,20 @@ namespace LaSede
 
         private void btnVistaAlquiler_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new vistaTipos());
+            // Navigation.PushAsync(new vistaTipos());
+            Navigation.PushAsync(new vistaCanchas("R"));
+        }
+
+        private void btnVistaReservas_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new vistaMisReservas());
+
+        }
+
+        private void btnVistaUbicacionr_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new vistaUbicaciones());
+
         }
     }
 }

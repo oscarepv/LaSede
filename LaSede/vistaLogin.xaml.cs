@@ -16,7 +16,7 @@ namespace LaSede
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class vistaLogin : ContentPage
     {
-        private const string Url = "http://dmoviles-proyecto.atwebpages.com/usuarioPost.php";
+        private const string Url = "http://192.168.1.3/laSedeWebService/usuarioPost.php";
         HttpClient cliente = new HttpClient();
 
         public vistaLogin()
@@ -47,13 +47,23 @@ namespace LaSede
                     if (usuario.correo == txtEmail.Text && usuario.password == txtPasswd.Text)
                     {
                         UserSettings.userId = usuario.id_Usuario;
+
                         UserSettings.userName = usuario.nombres + " " + usuario.apellidos;
+                        UserSettings.tiposuario = usuario.tipoUsuario;
                         await DisplayAlert("Alerta", "Bienvenido: " + usuario.nombres, "Ok");
-                        await Navigation.PushAsync(new vistaMenu());
+                        if (UserSettings.tiposuario.Equals("1"))
+                        {
+                            await Navigation.PushAsync(new vistaMenu());
+                        }
+                        else
+                        {
+                            await Navigation.PushAsync(new vistaMenuAdministrador());
+                        }
+
                     }
                     else
                     {
-                        await DisplayAlert("Alerta", "La contraseña es incorrecta", "Ok");
+                        await DisplayAlert("Alerta", "Usuario o contraseña es incorrecta", "Ok");
                     }
                 }
 

@@ -14,7 +14,7 @@ namespace LaSede
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class vistaRegistro : ContentPage
     {
-        private const string Url = "http://dmoviles-proyecto.atwebpages.com/usuarioPost.php";
+        private const string Url = "http://192.168.1.3/laSedeWebService/usuarioPost.php";
         HttpClient cliente = new HttpClient();
         public vistaRegistro()
         {
